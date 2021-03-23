@@ -40,4 +40,8 @@ public function logout(Request $request){
     // return redirect('/');
     echo('berhasil');
 }
+
+public function get_user(){
+	echo "user";
+}
 }
