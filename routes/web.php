@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/loginPage', 'AuthController@index')->name('loginPage'); 
 Route::post('login', 'AuthController@login')->name('login');
 Route::get('logout', 'AuthController@logout')->name('logout');
+
+Route::get('/', [OrderController::class, 'index'])->name('order');
