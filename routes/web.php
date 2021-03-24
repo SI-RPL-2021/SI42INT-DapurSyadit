@@ -1,7 +1,7 @@
 <?php
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\InformationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +22,4 @@ Route::post('login', 'AuthController@login')->name('login');
 Route::get('logout', 'AuthController@logout')->name('logout');
 
 Route::get('/', [OrderController::class, 'index'])->name('order');
+Route::get('/', [InformationController::class, 'index'])->name('order');
