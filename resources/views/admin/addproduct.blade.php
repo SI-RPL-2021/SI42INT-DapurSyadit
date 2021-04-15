@@ -105,32 +105,30 @@
           <div class="section-body">
             <h2 class="section-title">This is Dapoer Syadit Product</h2>
             <p class="section-lead">Dapoer Syadit Product</p>
-            <div class="card">
-						<div class="col-md-12">
-							<div class="card">
-								<div class="card-header">
-									<a href="" class="btn btn-primary btn-round ml-auto" style="float: right;">
-										<i class="fa fa-plus"></i>
-										Add Product
-									</a>
+            <form method="post" action="" enctype="multipart/form-data">
+            <div class="row">
+							<div class="col-lg-6 col-md-6 cols-sm-12">
+								<div class="form-group" style="margin-top: 20px;">
+									<label for="exampleInputEmail1">Id</label>
+									<input type="number" name="productid" class="form-control" id="productid" aria-describedby="productid">
 								</div>
-                <div class="card-body">
-									<div class="table-responsive">
-										<table id="paket-datatables" class="display table table-bordered table-hover"  >
-											<thead>
-												<tr>
-                          <th rowspan="2">Id</th>
-													<th rowspan="2">Name</th>
-													<th rowspan="2">Price</th>
-													<th rowspan="2">Product Description</th>
-													<th rowspan="2">Action</th>
-                        </tr>
-                        <td>
-														<li class="list-inline-item">
-															<a href="" class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-															<a href="" class="btn btn-info btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
-														</li>
-													</td>
+								<div class="form-group"  style="margin-top: 5px;">
+									<label for="exampleInputEmail1">Name</label>
+									<input type="text" class="form-control" name="productname" aria-describedby="productname">
+								</div>
+								<div class="form-group" style="margin-top: 55px;">
+									<label for="exampleInputPassword1">Price</label>
+									<input type="text" name="productprice" class="form-control" id="productdescription">
+								</div>
+                                <div class="form-group" style="margin-top: 55px;">
+									<label for="exampleInputPassword1">Product Description</label>
+									<input type="text" name="productdescription" class="form-control" id="productdescription">
+								</div>
+								</div>
+                                <div class="form-group">
+                  <input type="submit" class="btn btn-primary btn-md" style="margin-left: 35%; width: 30%;"></input>
+                  </div>             
+          </form>
             
 
   <!-- General JS Scripts -->
