@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get('/loginPage', 'AuthController@index')->name('loginPage'); 
 Route::post('login', 'AuthController@login')->name('login');
 Route::get('logout', 'AuthController@logout')->name('logout');
+Route::resource('order', 'OrderController::class');
 
 Route::get('/', [OrderController::class, 'index'])->name('order');
 Route::get('/', [InformationController::class, 'index'])->name('order');
