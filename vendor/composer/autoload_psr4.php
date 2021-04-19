@@ -7,11 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'voku\\' => array($vendorDir . '/voku/portable-ascii/src/voku'),
-<<<<<<< HEAD
-    'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/type-resolver/src', $vendorDir . '/phpdocumentor/reflection-docblock/src'),
-=======
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
->>>>>>> 59e08e809930743e8ca4f8484d930d37ffeb8409
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'TijsVerkoyen\\CssToInlineStyles\\' => array($vendorDir . '/tijsverkoyen/css-to-inline-styles/src'),
@@ -60,11 +56,16 @@ return array(
     'League\\MimeTypeDetection\\' => array($vendorDir . '/league/mime-type-detection/src'),
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
     'League\\CommonMark\\' => array($vendorDir . '/league/commonmark/src'),
+    'Laravel\\Ui\\' => array($vendorDir . '/laravel/ui/src'),
     'Laravel\\Tinker\\' => array($vendorDir . '/laravel/tinker/src'),
+    'Laravel\\Sail\\' => array($vendorDir . '/laravel/sail/src'),
+    'Illuminate\\Support\\' => array($vendorDir . '/laravel/framework/src/Illuminate/Macroable', $vendorDir . '/laravel/framework/src/Illuminate/Collections'),
+    'Illuminate\\Foundation\\Auth\\' => array($vendorDir . '/laravel/ui/auth-backend'),
     'Illuminate\\' => array($vendorDir . '/laravel/framework/src/Illuminate'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
+    'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
     'Fruitcake\\Cors\\' => array($vendorDir . '/fruitcake/laravel-cors/src'),
     'Fideloper\\Proxy\\' => array($vendorDir . '/fideloper/proxy/src'),
     'Faker\\' => array($vendorDir . '/fakerphp/faker/src/Faker'),
@@ -77,6 +78,8 @@ return array(
     'Doctrine\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib/Doctrine/Inflector'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib/Doctrine/Common/Lexer'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
+    'Database\\Seeders\\' => array($baseDir . '/database/seeders'),
+    'Database\\Factories\\' => array($baseDir . '/database/factories'),
     'Cron\\' => array($vendorDir . '/dragonmantank/cron-expression/src/Cron'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
