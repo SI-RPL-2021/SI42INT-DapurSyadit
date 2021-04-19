@@ -7,7 +7,7 @@
     <p class="text-muted">There is no data...</p>
 </div>
 <div class="d-flex justify-content-center">
-    <a href="{{ route('admin.create')}}" class="btn btn-dark">Add Product</a>
+    <a href="{{ route('admin.create')}}" class="btn btn-dark">Add Products</a>
 </div>
 
 @elseif (count($products) > 0)
@@ -15,7 +15,7 @@
 {{ $i = 0 }}
 <h1 class="text-center">List Product</h1>
 <div class="container d-flex">
-    <a href="{{ route('admin.create' )}}" class="btn btn-dark">Add Product</a>
+    <a href="{{ route('admin.create' )}}" class="btn btn-dark">Add Products</a>
 </div>
 <br>
 <div class="container d-flex justify-content-center">
