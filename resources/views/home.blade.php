@@ -15,7 +15,7 @@
                     @endif
                     
                     <div class="d-flex justify-content-center">
-                        <p class="text-muted">Mohon maaf semua stock sedang habis.</p>
+                        <p class="text-muted">Sorry, we're out of stock. Check back later!</p>
                     </div>
                 </div>
             </div>
