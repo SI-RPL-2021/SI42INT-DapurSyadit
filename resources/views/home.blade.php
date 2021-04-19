@@ -13,13 +13,10 @@
                         {{ session('status') }}
                     </div>
                     @endif
-
-                   
+                    
                     <div class="d-flex justify-content-center">
-                        <p class="text-muted">We're still out of stock. Check back later!.</p>
+                        <p class="text-muted">Mohon maaf semua stock sedang habis.</p>
                     </div>
-                  
-
                 </div>
             </div>
         </div>
