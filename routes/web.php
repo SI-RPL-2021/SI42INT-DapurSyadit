@@ -1,27 +1,22 @@
 <?php
-use App\Http\Controllers\OrderController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\InformationController;
-use App\Http\Controllers\AdminProductController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
+use Illuminate\Support\Facades\Route;
+
+// Landing Page
 Route::get('/', function () {
     return view('welcome');
 });
-//view link
-Route::get('/loginPage', 'AuthController@index')->name('loginPage'); 
-Route::post('login', 'AuthController@login')->name('login');
-Route::get('logout', 'AuthController@logout')->name('logout');
 
-Route::get('/', [OrderController::class, 'index'])->name('order');
-Route::get('/', [InformationController::class, 'index'])->name('order');
-Route::get('/', [AdminProductController::class, 'index'])->name('order');
+// AUTH
+Auth::routes();
+
+// USER
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// ADMIN
+Route::get('admin/home', [App\Http\Controllers\ProductsController::class, 'index'])->name('admin.home')->middleware('is_admin');
+Route::get('admin/create', [App\Http\Controllers\ProductsController::class, 'create'])->name('admin.create')->middleware('is_admin');
+Route::post('admin/create', [App\Http\Controllers\ProductsController::class, 'createProcess'])->name('admin.createProcess')->middleware('is_admin');
+Route::get('admin/update/{id}', [App\Http\Controllers\ProductsController::class, 'edit'])->name('admin.edit')->middleware('is_admin');
+Route::post('admin/update/{id}', [App\Http\Controllers\ProductsController::class, 'update'])->name('admin.editProcess')->middleware('is_admin');
+Route::post('admin/delete', [App\Http\Controllers\ProductsController::class, 'destroy'])->name('admin.delete')->middleware('is_admin');
