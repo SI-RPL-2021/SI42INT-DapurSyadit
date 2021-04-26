@@ -30,14 +30,14 @@
             </td>
             <td>
                 @if ($product->is_admin === 1)
-                {{ __('No Delete : Admin') }}
+                {{ __('Default') }}
                 @elseif ($product->name === 'User')
-                {{ __('No Delete : Example User') }}
+                {{ __('Default') }}
                 @else
                 <form action="{{ route('admin.userDelete') }}" method="post">
                     @csrf
                     <input type="hidden" value="{{ $product->id }}" name="id">
-                    <button class="btn btn-danger">Hapus</button>
+                    <button class="btn btn-danger">Delete</button>
                 </form>
             </td>
             @endif
