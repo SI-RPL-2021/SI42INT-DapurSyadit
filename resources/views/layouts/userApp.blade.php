@@ -38,7 +38,39 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        @guest
+                        @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('home') }}">
+                                <h5 class="fs-1 ">Home</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <h5 class="nav-link ">|</h5>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('orderList') }}">
+                                <h5 class="fs-1 ">My Order</h5>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <h5 class="nav-link ">|</h5>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://wa.me/6281236020875">
+                                <h5 class="fs-1 ">Contact Admin 1 : Adam</h5>
+                            </a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <h5 class="nav-link ">|</h5>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://wa.me/6282143321000">
+                                <h5 class="fs-1 ">Contact Admin 2 : Farras</h5>
+                            </a>
+                        </li>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -59,7 +91,7 @@
                         @else
                         <li class="nav-item dropdown">
                             <p class="text-center">
-                                Hi, <b> {{ Auth::user()->name }} </b> !
+                                Hai, <b> {{ Auth::user()->name }} </b> !
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     Click here to {{ __('Logout') }}
