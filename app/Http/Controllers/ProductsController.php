@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Products;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Order;
 
 class ProductsController extends Controller
 {
@@ -17,7 +18,7 @@ class ProductsController extends Controller
     {
         $products = Products::all();
 
-        return view('adminHome', compact('products'));
+        return view('admin.adminHome', compact('products'));
     }
 
     /**
@@ -27,7 +28,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('adminCreate');
+        return view('admin.adminCreate');
     }
 
     public function createProcess(Request $request)
@@ -86,7 +87,7 @@ class ProductsController extends Controller
     {
         $products = Products::find($id);
 
-        return view('adminUpdate', compact('products'));
+        return view('admin.adminUpdate', compact('products'));
     }
 
     /**
@@ -113,7 +114,7 @@ class ProductsController extends Controller
         $products->price = $request->price;
         $products->description = $request->description;
         $products->stock = $request->stock;
-        $products->img_path = $pathImg;
+        $products->img_path = request()->$pathImg;
         $products->save();
 
         return redirect(route('admin.home'));
@@ -137,7 +138,7 @@ class ProductsController extends Controller
     {
         $user = User::all();
 
-        return view('adminUser', compact('user'));
+        return view('admin.adminUser', compact('user'));
     }
 
     public function destroyUser(Request $request)
@@ -148,4 +149,5 @@ class ProductsController extends Controller
         return redirect(route('admin.user'));
     }
 
+    
 }

@@ -17,7 +17,7 @@ class OrdersController extends Controller
     {
         $products = Products::all();
 
-        return view('home', compact('products'));
+        return view('user.home', compact('products'));
     }
 
     /**
@@ -29,16 +29,17 @@ class OrdersController extends Controller
     {
         $products = Products::find($id);
 
-        return view('order', compact('products'));
+        return view('user.order', compact('products'));
     }
 
     public function createProcess(Request $request)
     {
         $orders = new Orders();
         $orders->product_id = $request->prodID;
-        $orders->amount = $request->amount;
+        $orders->amount = $request->buyer_quantity;
         $orders->buyer_name = $request->buyer_name;
         $orders->buyer_contact = $request->buyer_contact;
+        $orders->status = "Sedang Diproses";
         $orders->save();
 
         return redirect(route('home'));
@@ -66,7 +67,7 @@ class OrdersController extends Controller
         $orders = Orders::all();
         $products = Products::all();
 
-        return view('transaction', compact('orders'), compact('products'));
+        return view('user.transaction', compact('orders'), compact('products'));
     }
 
     /**
@@ -101,5 +102,53 @@ class OrdersController extends Controller
     public function destroy(Orders $orders)
     {
         //
+    }
+
+    public function userOrder()
+    {
+        $order = Orders::all();
+
+        return view('admin.adminOrder', compact('order'));
+    }
+
+
+    public function orderDelete(Request $request)
+    {
+        $order = Orders::find($request->id);
+        $order->delete();
+
+        return redirect(route('admin.userOrder'));
+    }
+
+    public function orderList()
+    {
+        $order = Orders::all();
+
+        return view('user.orderList', compact('order'));
+    }
+
+    public function UorderDelete(Request $request)
+    {
+        $order = Orders::find($request->id);
+        $order->delete();
+
+        return redirect(route('orderList'));
+    }
+
+    public function orderProcess(Request $request)
+    {
+        $order = Orders::find($request->id);
+        if ($order['status'] == "Sedang Diproses") {
+            $order->status = "Sedang Dikirim";
+            $order->save();
+        } elseif ($order['status'] == "Sedang Dikirim") {
+            $order->status = "Sudah Diterima";
+            $order->save();
+        } elseif ($order['status'] == "Sudah Diterima") {
+            $order->status = "Pesanan Selesai";
+            $order->save();
+        }
+
+        return redirect(route('admin.userOrder'));
     }
 }
