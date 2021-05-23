@@ -34,8 +34,8 @@ use App\Models\Products;
                 <td>{{ $product->buyer_contact }}</td>
                 <td>{{ $product->status }}</td>
                 <td class="d-flex justify-content-around">
-                    @if($product->status === "Pesanan Selesai")
-                    <p class="text-danger"><b>Selesai</b></p>
+                    @if($product->status === "Order Complete")
+                    <p class="text-danger"><b>Complete</b></p>
                     @else
                     <form action="{{ route('admin.orderProcess') }}" method="post">
                         @csrf
@@ -45,7 +45,7 @@ use App\Models\Products;
                     <form action="{{ route('admin.orderDelete') }}" method="post">
                         @csrf
                         <input type="hidden" value="{{ $product->id }}" name="id">
-                        <button class="btn btn-danger">Hapus</button>
+                        <button class="btn btn-danger">Delete</button>
                     </form>
                     @endif
                 </td>
