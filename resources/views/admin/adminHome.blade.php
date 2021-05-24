@@ -7,8 +7,7 @@
         <h2>Dashboard</h2>
     </div>
     <div class="row p-3">
-        <p style="font-size:20px; font-weight:light;">hello admin, welcome to this page
-            lets enjoy it.</p>
+        <p style="font-size:20px; font-weight:light;">Welcome Admin!</p>
     </div>
 </div>
 @endsection
