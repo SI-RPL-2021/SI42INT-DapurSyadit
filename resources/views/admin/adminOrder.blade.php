@@ -6,7 +6,7 @@ use App\Models\Products;
 @section('content')
 <div class="container-fluid">
     {{ $i = 0 }}
-    <h2 class="text-center">List User</h2>
+    <h2 class="text-center">List Orders</h2>
     <br>
     <div class="container d-flex justify-content-center">
         <table class="table table-striped">
