@@ -4,7 +4,7 @@
 <div class="row mx-5">
     <div class="col-6 px-3">
         {{-- bagian img makanan --}}
-        <img src="{{asset("public/$products->img_path")}}" width="700" alt="" class="img-food">
+        <img src='{{asset("public/$products->img_path")}}' alt="" class="img-food" style="width:630px"></img>
         {{-- bagian img makanan --}}
     </div>
     <div class="col-6 pl-5">
@@ -51,6 +51,7 @@
                         <input type="text" max="13" class="form-control" id="exampleInputPassword1"
                             placeholder="fill here" name="buyer_contact">
                         <input type="hidden" name="prodID" value="{{$products->id}}">
+                        <input type="hidden" name="userID" value="{{Auth::User()->id}}">
                     </div>
                 </div>
             </div>
