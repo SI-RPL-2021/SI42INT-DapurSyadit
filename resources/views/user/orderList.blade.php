@@ -7,7 +7,7 @@ use App\Models\Products;
 <?php
 $i = 0;
 ?>
-<h1 class="text-center">History : {{Auth::user()->name}}</h1>
+<h1 class="text-center">History: {{Auth::user()->name}}</h1>
 <br>
 <div class="container d-flex justify-content-center">
     <table class="table table-striped">
