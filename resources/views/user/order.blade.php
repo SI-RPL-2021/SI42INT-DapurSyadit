@@ -47,7 +47,7 @@
                             name="buyer_name">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Buyer Contact</label>
+                        <label for="exampleInputPassword1">Buyer Contact Information</label>
                         <input type="text" max="13" class="form-control" id="exampleInputPassword1"
                             placeholder="fill here" name="buyer_contact">
                         <input type="hidden" name="prodID" value="{{$products->id}}">
