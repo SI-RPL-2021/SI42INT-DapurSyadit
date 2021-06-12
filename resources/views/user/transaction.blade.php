@@ -1,4 +1,4 @@
-@extends('layouts.userApp')
+@extends('layouts.app')
 @section('title', 'Transaction')
 @section('content')
 
@@ -11,7 +11,9 @@
     <a href="{{ route('home') }}" class="btn btn-dark">Order Now</a>
 </div>
 @elseif (count($orders) > 0)
-{{ $i = 0 }}
+<?php
+$i = 0;
+?>
 <h1 class="text-center">Transaction</h1>
 <br><br>
 <div class="container d-flex justify-content-center">
