@@ -36,7 +36,7 @@
                         <button type="submit" class="btn btn-primary" style="width: 180px;border-radius:30px">
                             {{ __('Login') }}
                         </button>
-                        <p class="mt-2">Belum memiliki akun? <a href="{{route('register')}}">Daftar</a></p>
+                        <p class="mt-2">Don't have an account yet? <a href="{{route('register')}}">Register</a></p>
                     </div>
             </div>
             </form>

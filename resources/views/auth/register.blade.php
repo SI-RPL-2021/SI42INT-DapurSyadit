@@ -98,7 +98,7 @@
                         <button type="submit" class="btn btn-primary" style="width: 180px;border-radius:30px">
                             {{ __('Register') }}
                         </button>
-                        <p class="mt-2">Sudah memiliki akun? <a href="{{route('login')}}">Login</a></p>
+                        <p class="mt-2">Already have an account? <a href="{{route('login')}}">Login</a></p>
                     </div>
                 </form>
             </div>
