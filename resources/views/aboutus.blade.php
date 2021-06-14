@@ -62,7 +62,12 @@
             <img class="card-img-top" src="{{asset('images/banner-web.png')}}" alt="Card image cap">
                 <div class="card-body px-3 mt-4">
                 <h2>Apa itu Dapur Syadit?</h2>
-                    <p>Dapur syadit merupakan website catering yag ...</p>
+                    <p>Dapur Syadit, a catering business that is located in Tegal, Central Java. This business was founded in 2019 with
+                    the main focus on the small scale, but now is already developing into a mid-scale business that can serve 500-700 boxes
+                    of ready-to-eat foods per week. Dapur Syadit also collaborates with many agencies in the state to provide food if there is
+                    an on-going event in an agency. In this pandemic era, local government issues a regulation that limits the mobility of
+                    the citizen outside the house. To overcome that, Dapur Syadit creates innovation in the form of a website that can be used
+                    by the customer to order food from the caterer.</p>
                 </div>
             </div>
             </div>
