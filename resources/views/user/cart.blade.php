@@ -72,7 +72,7 @@ $i = 0;
     <div class="row mt-3">
         <div class="col">
             <div class="text-right">
-                <h3>Total Harga : Rp. {{$total}}</h3>
+                <h3>Total Price: Rp. {{$total}}</h3>
             </div>
             <form action="{{ route('cartConfirmation') }}" method="post" class="text-right">
                 @csrf
